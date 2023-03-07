@@ -1,4 +1,4 @@
-package gitDemo.Hello;
+package Hello;
 
 public class Diff {
     public static void main(String[] args) {
