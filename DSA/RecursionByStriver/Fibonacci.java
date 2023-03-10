@@ -25,6 +25,7 @@ public class Fibonacci {
         return fib;
     }
 
+    // time complexity is 2 to power n -> exponential
     public static int fibRec(int n){
 
         if(n==1 || n==0)
