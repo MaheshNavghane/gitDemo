@@ -20,7 +20,32 @@ public class Subsquences {
         
         int[] arr = {3,1,2};
 
+        subsequences(arr);
+
+        System.out.println();
         subsquencesRec(0, arr, new ArrayList<>());
+
+     }
+
+     public static void subsequences(int[] arr){   //time complexity n 2 to the power n 
+
+      int n = arr.length;
+
+      for(int num = 0; num<(1<<n); num++){
+
+         List<Integer> list = new ArrayList<>();
+         for(int idx= 0; idx<n; idx++){
+
+            if((num&(1<<idx)) != 0){
+               list.add(arr[idx]);
+            }
+         }
+
+         if(list.size()>0)
+         System.out.println(list);
+      }
+
+      
      }
 
      public static void subsquencesRec(int idx, int[] arr,List<Integer> list){
